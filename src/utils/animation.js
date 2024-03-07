@@ -1,5 +1,4 @@
-
-
+/* Container Variant Animation */
 export const containerVariant= (delay= 0)=> ({
     "offscreen": {
         opacity:0,
@@ -16,6 +15,8 @@ export const containerVariant= (delay= 0)=> ({
     }
 })
 
+
+/* Tag Variant Animation */
 export const tagVariants={
     "offscreen":{
         opacity: 0,
@@ -31,7 +32,7 @@ export const tagVariants={
     }
 }
 
-
+/* Title Variant Animation */
 export const titleVariants = {
     "offscreen": {
         opacity: 0,
@@ -48,6 +49,7 @@ export const titleVariants = {
     }
 }
 
+/* Description Variant Animation */
 export const desVariants = {
     "offscreen": {
         opacity:0,
