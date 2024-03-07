@@ -1,0 +1,162 @@
+.ticway-wrapper {
+  padding-top: 10rem;
+}
+
+.ticway-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem; /* Add padding-top to ticway-container in all media */
+}
+
+.ticway-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  max-width: 50rem;
+  margin: auto;
+  color: #ffa600;
+  font-size: 2.2rem;
+}
+
+.slick-slider {
+  margin-top: 9rem;
+}
+
+.slick-track {
+  padding: 4rem 0rem;
+}
+
+.slick-slide > div {
+  padding: 0 20px;
+  height: 100%; /* Ensure the container takes full height of the slide */
+}
+
+.slick-dots {
+  bottom: 0px!important; /* Adjust the value as needed */
+}
+
+.slick-dots .custom-dots {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(194, 201, 211);
+  border-radius: 100%;
+}
+
+
+
+
+
+.ticway-feature {
+  display: flex !important;
+  flex-direction: column;
+  border-radius: 20px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2rem;
+  gap: 3rem;
+  height: 100%; /* Ensure the container takes full height of the slide */
+  width: 80%; /* Adjust the width as needed (e.g., 80% of the parent container) */
+  background-color: #fafafa;
+ 
+
+  
+
+}
+
+.ticway-content {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center; /* Center content horizontally */
+}
+
+.ticway-content .sec-title {
+  text-align: center; /* Center sec-title */
+  
+}
+
+.ticway-content .text {
+  text-align: left; /* Align description to the left */
+}
+
+
+
+ 
+  
+  
+  @media (max-width: 550px) {
+    .ticway-feature {
+      width: 80%;
+      margin: 0 auto;
+ 
+     
+    }
+
+    .ticway-wrapper{
+        padding-top: 10rem;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .ticway-feature {
+      background-color: #09171f;
+
+
+  }
+
+  .ticway-head {
+    margin-bottom: -40%;
+    margin-top: -5%;
+
+  }
+
+
+
+
+  .sec-title{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+  }
+
+  .text{
+    color: white;
+  }
+} 
+
+
+  @media (min-width: 1200px) {
+    .slick-slide.slick-active.slick-current + .slick-slide .ticway-feature{
+      transition: all 1000ms ease-out;
+      scale: 1.1;
+      transform: translateY(-30px);
+      background-color: var(--secondary-color);
+  
+
+
+      
+    
+
+
+    }
+
+  
+    
+
+
+    .slick-slide.slick-active.slick-current + .slick-slide .sec-title{
+       color: white;
+    }
+
+
+    .slick-slide.slick-active.slick-current + .slick-slide .text{
+      color: white;
+   }
+
+
+    
+  }
+  

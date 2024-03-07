@@ -1,0 +1,120 @@
+
+section{
+    height: 100vh;
+    scroll-snap-align: center ;
+    
+}
+
+
+.app{
+    position: relative;
+    transition: all 300ms ease-out;
+}
+
+
+
+.tag{
+   color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.title{
+    font-size: 4.5rem;
+    color: linear-gradient(to right, var(--primary-color), #071625);
+    font-weight: 600;
+    text-align: center;
+    line-height: 5rem;
+
+    
+}
+
+.des{
+    font-size: 1.5rem;
+    color: #f49e2b;
+    line-height: 2rem;
+    font-weight: 200;
+}
+
+.sec-title{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.sec-titles{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.text{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 200;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.texts{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 200;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .title{
+
+        font-size: 2.1rem;
+        line-height: 4rem;
+        padding: 5px;
+    
+   
+    }
+
+    .des{
+        font-size: 0.5rem;
+        justify-content: space-evenly;
+      
+    }
+
+    .sec-title{
+        font-size: 1.5rem;
+        font-weight: 100;
+        
+    }
+
+    .sec-titles{
+        font-size: 1.5rem;
+        font-weight: 100;
+        
+    }
+
+    .tag{
+        
+        font-size: 1.2rem;
+        text-align: center;
+    
+    }
+
+
+   
+
+
+}    

@@ -1,0 +1,179 @@
+.n-wrapper {
+    background: var(--secondary-color);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.sticky {
+    position: fixed;
+    background-color: var(--secondary-color);
+    top: 0;
+    width: 100%;
+}
+
+.logo-image {
+    margin-top: -10%;
+    cursor: pointer;
+}
+
+.n-container {
+    padding: 1.5rem 1rem;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.sticky .n-container {
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.n-logo {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.n-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 0.9rem;
+}
+
+.n-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact-button {
+    color: var(--light-bg);
+    background: #f49e2b;
+    padding: 1rem 1.6rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nm-container {
+    display: none;
+}
+
+.n-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.n-logo {
+    margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    .n-container {
+        display: none;
+    }
+
+    .nm-container {
+        display: block;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        position: relative;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+    }
+
+    .nm-container>:nth-child(1) {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .nm-menu {
+        position: fixed;
+        top: 3.85rem;
+        padding: 3rem 2rem;
+        box-sizing: border-box;
+        left: 0;
+        text-align: center;
+        display: flex;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        transform: translateX(-150%);
+        transition: all 300ms ease-in-out;
+        width: 100%;
+        font-size: 1.2rem;
+        z-index: 99;
+        height: calc(100vh - 3.9rem);
+        cursor: pointer;
+    }
+
+    .n-logo {
+        margin-left: 0;
+    }
+
+    .logo-image {
+        margin-top: -5%;
+        margin-left: -5%;
+    }
+
+    .nm-menu a {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        cursor: pointer;
+    }
+
+    .m-contact-button {
+        width: 100%;
+        background: #f49e2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 1rem 0rem;
+        border-radius: 999px;
+        columns: var(--dark-bg);
+        color: var(--light-bg);
+    }
+}
+
+/* Sticky styles for both big and small screens */
+.n-wrapper.sticky {
+    position: fixed;
+    background-color: var(--secondary-color);
+    top: 0;
+    width: 100%;
+}
+
+.n-container.sticky {
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.nm-menu.sticky {
+    position: fixed;
+    top: 3.85rem;
+    padding: 3rem 2rem;
+    /* Add other styles for the sticky mobile menu as needed */
+}
+
+body {
+    margin-top: 0;
+}
+
+.n-wrapper.sticky + * {
+    margin-top: 3.9rem; /* Adjust this value to ensure content is not covered */
+}

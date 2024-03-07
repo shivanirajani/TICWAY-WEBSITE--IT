@@ -1,0 +1,69 @@
+/* El CSS del Footer (Pie de Página)*/
+
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+
+  }
+  
+  .copyright {
+    font-size: 18px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px; 
+    margin-bottom: 20px;
+  }
+  
+  .social-icons i {
+    font-size: 24px; 
+  }
+  
+
+  @media (max-width: 600px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+ 
+    }
+  
+    .copyright {
+      margin: 10px 0;
+      text-align: center;
+      font-size: 18px; 
+      margin-right: 20px;
+    }
+  
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin-bottom: 20px;
+      margin-top: -2%;
+      margin-left: 90px;
+    }
+  
+    .social-icons a {
+      margin: 0 10px; 
+    }
+  }

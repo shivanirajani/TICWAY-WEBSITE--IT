@@ -1,0 +1,12 @@
+{
+    "gitlens.codeLens.scopes": [],
+    "gitlens.hovers.avatars": false,
+    "gitlens.hovers.autolinks.enabled": false,
+    "gitlens.views.commits.showBranchComparison": false,
+    "gitlens.views.commitDetails.autolinks.enabled": false,
+    "gitlens.views.commitDetails.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.views.searchAndCompare.avatars": false
+}

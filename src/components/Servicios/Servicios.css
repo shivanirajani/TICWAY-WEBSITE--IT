@@ -1,0 +1,117 @@
+.servicios-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+    
+  }
+  
+  .servicios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 40rem;
+  }
+  
+  .servicios-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    max-width: 50rem;
+    margin: auto;
+    color: #ffa200; 
+  }
+
+  .service-header span {
+    color: #fff; /* Set text color to white */
+  }
+
+  .service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .card {
+    background-color: rgba(51, 51, 51, 0.5); /* Transparent background color */
+    padding: 0.5rem; /* Add padding for the card */
+    border: 2px solid #fff; /* White border */
+    border-radius: 8px; /* Add border-radius for a rounded appearance */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+.logos-image{
+  margin-top: 100px;
+
+}
+.logos-images{
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.toggle-sign {
+  font-size: 24px; /* You can adjust the size as needed */
+  cursor: pointer;
+  margin-right: 20px; /* Add right margin to the toggle sign */
+  margin-top: 40px;
+
+
+}
+
+/* Add a spacer element to ensure even gap at the end */
+.spacer {
+  margin-left: 100px;
+}
+
+ 
+  
+  .question-title {
+    font-size: 1.5rem; /* Increase font size for the title */
+    color: #fff; /* Set text color to white */
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+
+   
+
+  }
+  
+  .description {
+    font-size: 1.2rem; /* Increase font size for the description */
+    color: #fff; /* Set text color to white */
+    text-align: left;
+    margin: 20px;
+  }
+  
+  @media (max-width: 550px) {
+    .servicios-container {
+      padding-top: 80rem; /* Adjust padding-top for smaller screens */
+    }
+  
+    .card {
+      margin: 0 20px; /* Adjust margins for smaller screens */
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .servicios-head {
+      max-width: 90%; /* Make the heading take full width on smaller screens */
+    }
+
+    .question-title {
+        font-size: 1.2rem; /* Increase font size for the title */
+        text-align: left;
+    } 
+    
+    .description {
+        font-size: 1rem; /* Increase font size for the description */
+    }  
+    
+    
+    
+  }
