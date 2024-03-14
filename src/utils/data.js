@@ -35,47 +35,47 @@ export const HeroData = [
 
 export const features = [
   {
-    icon: "/features/Frame-9.png",
+    icon: "/features/tecnologias.png",
     title: "Abordar necesidades tecnológicas"
 
     
   },
   {
-    icon: "/features/Frame-10.png",
+    icon: "/features/productividad.png",
     title: "Potenciar productividad empresarial",
    
   },
   {
-    icon: "/features/Frame-11.png",
+    icon: "/features/competitividad.png",
     title: "Mejorar competitividad empresarial",
 
   },
   {
-    icon: "/features/Frame-12.png",
+    icon: "/features/coste.png",
     title: "Costes Flexibles",
   },
   {
-    icon: "/features/Frame-7.png",
+    icon: "/features/control.png",
     title: "Control y Seguimiento TIC",
   },
   {
-    icon: "/features/Frame-8.png",
+    icon: "/features/innovación.png",
     title: "Innovación TIC",
   },
 
   {
-    icon: "/features/Frame-13.png",
+    icon: "/features/soluciones.png",
     title: "Soluciones Personalizadas"
 
    
   },
   {
-    icon: "/features/Frame-14.png",
+    icon: "/features/equipo.png",
     title: "Equipo TIC Multiespecializado"
     
   },
   {
-    icon: "/features/Frame-15.png",
+    icon: "/features/asesoria.png",
     title: "Asesoría TIC"
     
   },

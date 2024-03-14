@@ -44,11 +44,11 @@ const Navbar = () => {
               <Link to="outsourcing-wrapper" spy={true} smooth={true}>
                 <span>Outsourcing Tecnológico</span>
               </Link>
-              <Link to="servicios-container" spy={true} smooth={true}>
-              <span>Servicios</span>
-              </Link>
               <Link to="ticway-wrapper" spy smooth offset={100}>
                 <span>Ticway Contigo</span>
+              </Link>
+              <Link to="servicios-container" spy={true} smooth={true}>
+              <span>Servicios</span>
               </Link>
               <Link to="soluciones-wrapper" spy smooth offset={100}>
                 <span>Soluciones</span>
@@ -91,26 +91,28 @@ const Navbar = () => {
             to="outsourcing-wrapper"
             spy={true}
             smooth={true}
+            offset={100}
           >
             <span>Outsourcing Tecnológico</span>
-          </Link>
-          <Link
-            onClick={() => setMobileMenuOpened(false)}
-            to="servicios-head"
-            spy={true}
-            smooth={true}
-            offset={-50} 
-            
-          >
-            <span>Servicios</span>
           </Link>
           <Link
             onClick={() => setMobileMenuOpened(false)}
             to="ticway-wrapper"
             spy={true}
             smooth={true}
+            offset={1070}
           >
             <span>Ticway Contigo</span>
+          </Link>
+          <Link
+            onClick={() => setMobileMenuOpened(false)}
+            to="servicios-head"
+            spy={true}
+            smooth={true}
+            offset={-100} 
+            
+          >
+            <span>Servicios</span>
           </Link>
           <Link
             onClick={() => setMobileMenuOpened(false)}

@@ -98,16 +98,7 @@ const Contacto = () => {
       >
         <div className="textContainer" variants={variants}>
           <div className="item" variants={itemVariants}>
-            <motion.h1 ref={ref} style={{ color: "white", fontWeight: "100" }}>Contacto</motion.h1>
-            <motion.span
-              variants={tagVariants}
-              initial="offscreen"
-              whileInView={"onscreen"}
-              className="tag"
-              style={{ color: 'orange' }}
-            >
-              Contamos con expertos para tu servicio
-            </motion.span>
+            <motion.h1 ref={ref}>Contacto</motion.h1>
             <Map />
           </div>
           <div className="item" variants={itemVariants}>
@@ -122,7 +113,7 @@ const Contacto = () => {
           >
             <motion.svg viewBox="0 0 32.666 32.666">
               <motion.path
-                strokeWidth={0.2}
+                strokeWidth={0.3}
                 fill="none"
                 initial={{ pathLength: 0 }}
                 animate={isInView && { pathLength: 1 }}
@@ -144,12 +135,22 @@ const Contacto = () => {
             </motion.svg>
           </motion.div>
           <motion.form
+          
             ref={formRef}
             onSubmit={sendEmail}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
           >
+             <motion.span
+              variants={tagVariants}
+              initial="offscreen"
+              whileInView={"onscreen"}
+              className="tag"
+              style={{ color: 'orange' }}
+            >
+              Contamos con expertos para tu servicio
+            </motion.span>
             <input type="text" required placeholder="Nombre" name="nombre" />
             <input type="text" required placeholder="Apellidos" name="apellidos" />
             <input

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { titleVariants, tagVariants } from "@/src/utils/animation";
 import { FaDesktop, FaBullseye, FaBullhorn } from 'react-icons/fa';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 
 const outsourcingVariants = {
   offscreen: {
@@ -28,11 +28,11 @@ const Heading = () => {
         initial="offscreen"
         whileInView={"onscreen"} 
         className="tag"
-        style={{ color: 'orange' }}
+        style={{ color: 'white' }}
       >
         Enfrenta el desafío con éxito
       </motion.span>
-      <motion.span variants={titleVariants} initial="offscreen" whileInView={"onscreen"} className="title">
+      <motion.span variants={titleVariants} initial="offscreen" whileInView={"onscreen"} className="title" style={{ color: '#f49e2b' }}>
         Outsourcing Tecnológico
       </motion.span>
     </div>
@@ -65,6 +65,24 @@ const Outsourcing = () => {
       window.removeEventListener('resize', handleScreenResize);
     };
   }, []);
+
+  const CustomOption = ({ innerProps, label, data }) => (
+    <components.Option {...innerProps}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {data.icon && <div style={{ marginRight: '8px' }}>{data.icon}</div>}
+        {label}
+      </div>
+    </components.Option>
+  );
+  
+  const CustomSingleValue = ({ children, ...props }) => (
+    <components.SingleValue {...props}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {props.data.icon && <div style={{ marginRight: '8px' }}>{props.data.icon}</div>}
+        {children}
+      </div>
+    </components.SingleValue>
+  );
 
   const getContent = () => {
     const contentVariants = {
@@ -104,7 +122,7 @@ const Outsourcing = () => {
                   className="block-feature"
                 >
                   <Image src={feature.icon} alt="feature" width={100} height={100} /> <br />
-                  <span style={{ color: 'orange', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
+                  <span style={{ color: 'white', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
                 </motion.div>
               ))}
             </div>
@@ -142,7 +160,7 @@ const Outsourcing = () => {
                   className="block-feature"
                 >
                   <Image src={feature.icon} alt="feature" width={100} height={100} /> <br />
-                  <span style={{ color: 'orange', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
+                  <span style={{ color: 'white', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
                 </motion.div>
               ))}
             </div>
@@ -182,7 +200,7 @@ const Outsourcing = () => {
                   className="block-feature"
                 >
                   <Image src={feature.icon} alt="feature" width={100} height={100} /> <br />
-                  <span style={{ color: 'orange', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
+                  <span style={{ color: 'white', fontWeight: 'bolder', fontSize: "18px"}}>{feature.title}</span>
                 </motion.div>
               ))}
             </div>
@@ -195,23 +213,34 @@ const Outsourcing = () => {
   };
 
   return (
-    <div className="outsourcing-wrapper">
-      <Heading />
-      <div className="outsourcing-container">
-        <div className="sourcing-container">
-          {isSmallScreen && (
-            <div className="selection-container">
-              <Select
-                className="dropdown-menu"
-                options={[
-                  { value: "Outsourcing Tecnológico", label: <><FaDesktop size={16} /> Outsourcing Tecnológico</> },
-                  { value: "Nuestras Especialidades", label: <><FaBullseye size={16} /> Nuestras Especialidades</> },
-                  { value: "El Objectivo de Ticway", label: <><FaBullhorn size={16} /> El Objectivo de Ticway</> },
-                ]}
-                value={{ value: selectedSection, label: selectedSection }}
-                onChange={(selectedOption) => handleContainerClick(selectedOption.value)}
-              />
-            </div>
+  <div className="outsourcing-wrapper">
+  <Heading />
+  <div className="outsourcing-container">
+    <div className="sourcing-container">
+      {isSmallScreen && (
+        <Select
+          className="dropdown-menu"
+          options={[
+            { value: "Outsourcing Tecnológico", label: "Outsourcing Tecnológico", icon: <FaDesktop size={16} ccolor="var(--secondary-color)" /> },
+            { value: "Nuestras Especialidades", label: "Nuestras Especialidades", icon: <FaBullseye size={16} color="var(--secondary-color)" /> },
+            { value: "El Objectivo de Ticway", label: "El Objectivo de Ticway", icon: <FaBullhorn size={16} color="var(--secondary-color)" /> },
+          ]}
+          value={{
+            value: selectedSection,
+            label: selectedSection,
+            icon: (
+              // Determine the icon based on the selected section
+              selectedSection === "Outsourcing Tecnológico" ? <FaDesktop size={16} color="var(--secondary-color)" /> :
+              selectedSection === "Nuestras Especialidades" ? <FaBullseye size={16} color="var(--secondary-color)" /> :
+              selectedSection === "El Objectivo de Ticway" ? <FaBullhorn size={16} color="var(--secondary-color)" /> :
+              // Default icon if none of the above conditions match
+              <FaDesktop size={16} color="var(--secondary-color)" />
+            ),
+          }}
+          onChange={(selectedOption) => handleContainerClick(selectedOption.value)}
+          components={{ SingleValue: CustomSingleValue }}
+        />
+      
           )}
 
           <div className="outsourcing-content-container">
@@ -222,7 +251,7 @@ const Outsourcing = () => {
                 whileInView="onscreen"
                 className="selection-container">
                 <motion.div
-                  initial={{ opacity: 0, x: -100 }}
+                  initial={{ opacity: 0, x: -100 , y: -100 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
@@ -235,12 +264,14 @@ const Outsourcing = () => {
                   className={`section-container ${selectedSection === "Outsourcing Tecnológico" ? "active" : ""}`}
                   onClick={() => handleContainerClick("Outsourcing Tecnológico")}>
                   <div className="icon-container">
-                    <FaDesktop size={25} />
+                    <FaDesktop size={30} style={{ color: 'white'}}/>
                   </div>
-                  <span style={{ marginLeft: '8px' }}>Outsourcing Tecnológico</span>
+                  <div className="text-container">
+                  <span style={{ marginLeft: '8px', color: "white"}}>Outsourcing Tecnológico</span>
+                  </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, x: -100, y: -100 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
@@ -253,12 +284,14 @@ const Outsourcing = () => {
                   className={`section-container ${selectedSection === "Nuestras Especialidades" ? "active" : ""}`}
                   onClick={() => handleContainerClick("Nuestras Especialidades")}>
                   <div className="icon-container">
-                    <FaBullseye size={25} />
+                    <FaBullseye size={30} style={{ color: 'white'}}/>
                   </div>
-                  <span style={{ marginLeft: '8px' }}>Nuestras Especialidades</span>
+                  <div className="text-container">
+                  <span style={{ marginLeft: '8px', color: "white" }}>Nuestras Especialidades</span>
+                  </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: -100 }}
+                  initial={{ opacity: 0, x: -100 , y: -100 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
@@ -271,9 +304,11 @@ const Outsourcing = () => {
                   className={`section-container ${selectedSection === "El Objectivo de Ticway" ? "active" : ""}`}
                   onClick={() => handleContainerClick("El Objectivo de Ticway")}>
                   <div className="icon-container">
-                    <FaBullhorn size={25} />
+                    <FaBullhorn size={30}  style={{ color: 'white', marginRight: "16px" }}/>
                   </div>
-                  <span style={{ marginLeft: '8px' }}>El Objectivo de Ticway</span>
+                  <div className="text-container">
+                  <span style={{ marginLeft: '8px', color: "white" }}>El Objectivo de Ticway</span>
+                  </div>
                 </motion.div>
               </motion.div>
             )}

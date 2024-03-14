@@ -1,8 +1,14 @@
 .n-wrapper {
-    background: var(--secondary-color);
+    background-image: url(/image.png);
     width: 100%;
     position: absolute;
     z-index: 999;
+    background-size: cover;
+    
+   
+   
+
+
 }
 
 .sticky {
@@ -83,6 +89,15 @@
     .n-container {
         display: none;
     }
+    .n-wrapper{
+        border-bottom: none;
+        background-image: url(/image.png);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        background-size: cover;
+        
+    }
 
     .nm-container {
         display: block;
@@ -151,11 +166,15 @@
 }
 
 /* Sticky styles for both big and small screens */
+
+
+
 .n-wrapper.sticky {
     position: fixed;
-    background-color: var(--secondary-color);
+    background : linear-gradient(45deg, #0C2026, #192B32);
     top: 0;
     width: 100%;
+    
 }
 
 .n-container.sticky {
@@ -177,3 +196,21 @@ body {
 .n-wrapper.sticky + * {
     margin-top: 3.9rem; /* Adjust this value to ensure content is not covered */
 }
+
+
+@media (max-width: 1024px) {
+   
+    .n-wrapper{
+        background-image: url(/image.png);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        background-size: cover;
+        
+    }
+      
+      
+      
+    
+  }
+  

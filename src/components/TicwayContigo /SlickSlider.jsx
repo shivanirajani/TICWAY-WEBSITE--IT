@@ -81,4 +81,3 @@ const SlickSlider = ({ features }) => {
 };
 
 export default SlickSlider;
-

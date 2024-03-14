@@ -12,6 +12,7 @@ import TicwayContigo from "@/src/components/TicwayContigo /TicwayContigo";
 import Servicios from "@/src/components/Servicios/Servicios";
 import Footer from "@/src/components/Footer/Footer";
 import Soluciones from "@/src/components/Soluciones/Soluciones";
+import Services from "@/src/components/Services/Services";
 
 const shouldForwardProp = (prop) => !["position"].includes(prop);
 
@@ -35,7 +36,7 @@ export default function Home() {
         <motion.div
           onViewportEnter={() =>
             controls.start({
-              backgroundColor: "#FAFAFA",
+              backgroundColor: "#dddddd",
             })
           }
           onViewportLeave={() =>
@@ -47,7 +48,6 @@ export default function Home() {
         >
 
         <BrandingVideo />
-         <Outsourcing /> 
        
         </motion.div>
 
@@ -59,18 +59,20 @@ export default function Home() {
           }
           onViewportLeave={() =>
             controls.start({
-              backgroundColor: "#fafafa",
+              backgroundColor: "#dddddd",
             })
           }
-          viewport={{ amount: 0.1 }}
+          viewport={{ amount: 0.5 }}
         >
-          <Servicios />
+
+          <Outsourcing /> 
+    
         </motion.div>
 
         <motion.div
           onViewportEnter={() =>
             controls.start({
-              backgroundColor: "#FAFAFA",
+              backgroundColor: "#dddddd",
             })
           }
           onViewportLeave={() =>
@@ -91,7 +93,42 @@ export default function Home() {
           }
           onViewportLeave={() =>
             controls.start({
-              backgroundColor: "#fafafa",
+              backgroundColor: "#dddddd",
+            })
+          }
+          viewport={{ amount: 0.2 }}
+        >
+
+          <Servicios />
+        </motion.div>
+
+
+        <motion.div
+          onViewportEnter={() =>
+            controls.start({
+              backgroundColor: "#dddddd",
+            })
+          }
+          onViewportLeave={() =>
+            controls.start({
+              backgroundColor: "var(--secondary-color)",
+            })
+          }
+          viewport={{ amount: 0.1 }}
+        >
+
+          <Services />
+        </motion.div>
+
+        <motion.div
+          onViewportEnter={() =>
+            controls.start({
+              backgroundColor: "var(--secondary-color)",
+            })
+          }
+          onViewportLeave={() =>
+            controls.start({
+              backgroundColor: "#dddddd",
             })
           }
           viewport={{ amount: 0.3}}

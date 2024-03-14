@@ -1,5 +1,5 @@
 .ticway-wrapper {
-  padding-top: 10rem;
+  padding-top: 20rem;
 }
 
 .ticway-container {
@@ -16,7 +16,7 @@
   align-items: center;
   max-width: 50rem;
   margin: auto;
-  color: #ffa600;
+  color: var(--secondary-color);
   font-size: 2.2rem;
 }
 
@@ -40,7 +40,7 @@
 .slick-dots .custom-dots {
   width: 6px;
   height: 6px;
-  background-color: rgb(194, 201, 211);
+  background-color: transparent;
   border-radius: 100%;
 }
 
@@ -58,7 +58,7 @@
   gap: 3rem;
   height: 100%; /* Ensure the container takes full height of the slide */
   width: 80%; /* Adjust the width as needed (e.g., 80% of the parent container) */
-  background-color: #fafafa;
+  background-color: #dcd7d2;
  
 
   
@@ -96,14 +96,18 @@
     }
 
     .ticway-wrapper{
-        padding-top: 10rem;
+        padding-top: 70rem;
     }
   }
 
 
   @media (max-width: 768px) {
     .ticway-feature {
-      background-color: #09171f;
+      background-color: var(--secondary-color);
+      border: 2px solid #fff;
+      
+
+
 
 
   }
@@ -134,6 +138,8 @@
       scale: 1.1;
       transform: translateY(-30px);
       background-color: var(--secondary-color);
+      
+   
   
 
 
@@ -159,4 +165,48 @@
 
     
   }
+
+
+  @media (max-width: 1024px) {
+
+    .ticway-wrapper{
+      padding-top: 80rem;
+  }
+
+  .ticway-feature{
+    margin-top: 100px;
+    display: flex !important;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2rem;
+    gap: 3rem;
+    height: 600px; /* Ensure the container takes full height of the slide */
+    width: 500px; /* Adjust the width as needed (e.g., 80% of the parent container) */
+    
+  }
+
+  .ticway-content {
+   margin-top: 50px;
+  }
+  
+  .ticway-content .sec-title {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    
+  }
+  
+  .ticway-content .text {
+    text-align: left; /* Align description to the left */
+    margin: 20px;
+    margin-top: 60px;
+    font-size: 1rem;
+  }
+  
+   
+  }
+  
   
