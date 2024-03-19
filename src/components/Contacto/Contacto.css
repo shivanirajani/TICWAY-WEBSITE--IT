@@ -26,7 +26,8 @@
   font-size: 4.5rem;
   line-height: 60px; 
   margin-top: 20; 
-  color: orange;
+  color: var(--secondary-color);
+  font-weight: "bold";
   
  
   display: flex;
@@ -90,6 +91,25 @@
     flex: 1;
 }
 
+.iconAndTextContainer {
+    display: flex;
+   
+  }
+
+
+
+
+  .cards{
+    padding: 2rem; /* Add padding for the card */
+    background-color: #dcd7d2;
+    border-radius: 20px;
+   
+    text-align: left; /* Center the text */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+  }
+  
 
 .formContainer .phoneSvg {
     stroke: #f49e2b;
@@ -111,23 +131,26 @@
 .formContainer input,
 .formContainer textarea {
     padding: 15px; 
-    background-color: transparent;
-    border: 2px solid var(--light-bg);
-    color: white;
+    background-color: #dcd7d2;
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
     border-radius: 5px;
     font-family: inherit;
     font-size: 1rem; 
 }
 form input::placeholder,
 form textarea::placeholder {
-  color: white;
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 
+
+  
 .formContainer button {
     padding: 15px; 
-    border: none;
-    background-color: #f49e2b;
+    background-color: var(--secondary-color);
+    border: solid #fff;
     cursor: pointer;
     font-weight: 500;
     color: var(--light-bg);
@@ -146,7 +169,7 @@ form textarea::placeholder {
     }
 
     .textContainer h1 {
-        font-size: 2.2rem;
+        font-size: 3rem;
         margin-top: 0;
         color: var(--secondary-color);
         text-align: center;
@@ -163,7 +186,7 @@ form textarea::placeholder {
         margin: 1.2rem;
         text-align: center;
         font-weight: 300;
-        color: white;
+        color: var(--secondary-color)
     }
 
     .formContainer {
@@ -172,7 +195,7 @@ form textarea::placeholder {
 
     form input::placeholder,
     form textarea::placeholder {
-        color: white;
+        color: var(--secondary-color);
     }
 
     .formContainer .phoneSvg {

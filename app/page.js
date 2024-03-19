@@ -139,7 +139,7 @@ export default function Home() {
         <motion.div
           onViewportEnter={() =>
             controls.start({
-              backgroundColor: "var(--secondary-color)",
+              backgroundColor: "#dddddd",
             })
           }
           onViewportLeave={() =>

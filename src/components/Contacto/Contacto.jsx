@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
-import "./Contacto.css";
-import { motion, useInView } from "framer-motion";
-import { tagVariants } from "@/src/utils/animation";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+const React = require("react");
+const { useRef, useState } = React;
+const { motion, useInView } = require("framer-motion");
+const { tagVariants } = require("@/src/utils/animation");
+const emailjs = require("@emailjs/browser");
+const { ToastContainer, toast } = require('react-toastify');
+require('react-toastify/dist/ReactToastify.css');
+require("./Contacto.css");
+const { FaClock, FaEnvelope, FaPhone } = require('react-icons/fa');
 
 // Variants para las animaciones de entrada
 const variants = {
@@ -34,29 +36,7 @@ const itemVariants = {
   },
 };
 
-// Componente para mostrar el mapa
-const Map = () => {
-  const mapRef = useRef();
-  const isInView = useInView(mapRef, { margin: "-100px" });
 
-  return (
-    <motion.div
-      className="map-container"
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 0 } : { opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <iframe
-        title="Google Maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.3975344678215!2d-2.682759724201596!3d42.843338504433234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc21294130993%3A0xd7fc38ec295efb2d!2sTicway!5e0!3m2!1sen!2ses!4v1705627115819!5m2!1sen!2ses"
-        style={{ border: 0, width: "100%", height: "600px", maxWidth: "600px" }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </motion.div>
-  );
-};
 
 // Componente principal de la sección de contacto
 const Contacto = () => {
@@ -99,7 +79,59 @@ const Contacto = () => {
         <div className="textContainer" variants={variants}>
           <div className="item" variants={itemVariants}>
             <motion.h1 ref={ref}>Contacto</motion.h1>
-            <Map />
+            <div className="cardsContainer">
+              <motion.div
+                className="cards"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+              
+               <div className="iconAndTextContainer"> {/* Container for icon and text */}
+               <FaClock color="orange" size={30} style={{ marginRight: '10px' }} /> {/* Add margin to the right of the icon */}
+                  <h2 style={{ fontSize: '24px', margin: '0' }}>Horario:</h2>
+                </div>
+                <div className="additionalInfo">
+               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>Lunes y Jueves: 9:00 - 18:00</h3>
+               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>Viernes: 9:00 - 15:00</h3>
+      </div>
+        
+              </motion.div>
+              <motion.div
+                className="cards"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+       
+              <div className="iconAndTextContainer"> {/* Container for icon and text */}
+                  <FaEnvelope color="orange" size={30}  style={{ marginRight: '10px' }}/>
+                  <h2 style={{ fontSize: '24px', margin: '0' }}>Correo Electrónico:</h2>
+               </div>   
+                  <div className="additionalInfo">
+               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200"}}>info@ticway.com</h3>
+                </div>
+    
+  
+              </motion.div>
+              <motion.div
+                className="cards"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+         
+                <div className="iconAndTextContainer"> {/* Container for icon and text */}
+                  <FaPhone color="orange" size={30} style={{ marginRight: '10px' }}/>
+                  <h2 style={{ fontSize: '24px', margin: '0' }}>Teléfono:</h2>
+                 
+                  </div>   
+                  <div className="additionalInfo">
+               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>945 12 80 60</h3>
+                </div>
+           
+              </motion.div>
+            </div>
           </div>
           <div className="item" variants={itemVariants}>
           </div>
@@ -135,19 +167,18 @@ const Contacto = () => {
             </motion.svg>
           </motion.div>
           <motion.form
-          
             ref={formRef}
             onSubmit={sendEmail}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
           >
-             <motion.span
+            <motion.span
               variants={tagVariants}
               initial="offscreen"
               whileInView={"onscreen"}
               className="tag"
-              style={{ color: 'orange' }}
+              style={{ color: 'orange' , fontWeight: "bold"}}
             >
               Contamos con expertos para tu servicio
             </motion.span>
@@ -171,4 +202,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+module.exports = Contacto;
