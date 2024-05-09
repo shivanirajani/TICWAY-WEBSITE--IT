@@ -1,216 +1,219 @@
+/* El CSS de la sección de la Navegación de la Página Web */
+
+/* Estilos generales del contenedor del menú de navegación */
 .n-wrapper {
-    background-image: url(/image.png);
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-    background-size: cover;
-    
-   
-   
+    background-color: var(--secondary-color); 
+    width: 100%; 
+    position: absolute; 
+    z-index: 999; 
+    background-size: cover; 
 
 
 }
 
+/* Estilos para el menú de navegación fijo */
 .sticky {
-    position: fixed;
-    background-color: var(--secondary-color);
-    top: 0;
-    width: 100%;
+    position: fixed; 
+    background-color: var(--secondary-color); 
+    top: 0; 
+    width: 100%; 
 }
 
+/* Estilos para la imagen del logotipo */
 .logo-image {
     margin-top: -10%;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
+/* Estilos para el contenedor del menú de navegación */
 .n-container {
-    padding: 1.5rem 1rem;
-    color: white;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 400;
+    padding: 1.5rem 1rem; 
+    color: white; 
+    font-size: 1rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    font-weight: 500; 
 }
 
+/* Estilos para el contenedor del menú de navegación fijo */
 .sticky .n-container {
-    color: whitesmoke;
-    padding: 1rem;
+    color: whitesmoke; 
+    padding: 1rem; 
 }
 
+/* Estilos para el logotipo */
 .n-logo {
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.4rem;
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 1.4rem; 
 }
 
+/* Estilos para el contenido en el lado derecho */
 .n-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    font-size: 0.9rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 2.5rem; 
+    font-size: 0.9rem; 
 }
 
+/* Estilos para el menú de navegación */
 .n-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 2.5rem; 
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
+/* Estilos para el botón de contacto */
 .contact-button {
-    color: var(--light-bg);
-    background: #f49e2b;
-    padding: 1rem 1.6rem;
-    font-size: 1rem;
-    text-transform: capitalize;
-    border-radius: 999px;
-    font-size: 1.2rem;
-    cursor: pointer;
+    color: var(--light-bg); 
+    background: #f49e2b; 
+    padding: 1rem 1.6rem; 
+    font-size: 1rem; 
+    text-transform: capitalize; 
+    border-radius: 999px; 
+    cursor: pointer; 
 }
 
+/* Estilos para el contenedor del menú de navegación móvil, ocultar el contenedor */
 .nm-container {
     display: none;
 }
 
+/* Estilos para el contenedor del logotipo */
 .n-logo-container {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
 }
 
+/* Estilos para el logotipo */
 .n-logo {
-    margin-left: 10px;
+    margin-left: 10px; 
 }
 
+/* Media query para pantallas de hasta 1200px de ancho */
 @media (max-width: 1200px) {
+    /* Ocultar el contenedor del menú de navegación en pantallas pequeñas */
     .n-container {
-        display: none;
-    }
-    .n-wrapper{
-        border-bottom: none;
-        background-image: url(/image.png);
-        width: 100%;
-        position: absolute;
-        z-index: 999;
-        background-size: cover;
-        
+        display: none; 
     }
 
+    /* Estilos para el contenedor del menú de navegación móvil */
     .nm-container {
-        display: block;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        position: relative;
-        background-color: var(--secondary-color);
-        cursor: pointer;
+        display: block; 
+        color: white; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 1rem; 
+        position: relative; 
+        background-color: var(--secondary-color); 
+        cursor: pointer; 
     }
 
-    .nm-container>:nth-child(1) {
-        font-weight: bold;
-        font-size: 18px;
+    /* Estilos para el logotipo en el menú de navegación móvil */
+    .nm-container > :nth-child(1) {
+        font-weight: bold; 
+        font-size: 18px; 
     }
 
+    /* Estilos para el menú de navegación móvil */
     .nm-menu {
-        position: fixed;
-        top: 3.85rem;
-        padding: 3rem 2rem;
-        box-sizing: border-box;
-        left: 0;
-        text-align: center;
+        position: fixed; 
+        top: 3.85rem; 
+        padding: 3rem 2rem; 
+        box-sizing: border-box; 
+        left: 0; 
+        text-align: center; 
         display: flex;
-        background-color: var(--secondary-color);
-        flex-direction: column;
-        transform: translateX(-150%);
+        background-color: var(--secondary-color); 
+        flex-direction: column; 
+        transform: translateX(-150%); 
         transition: all 300ms ease-in-out;
-        width: 100%;
-        font-size: 1.2rem;
+        width: 100%; 
+        font-size: 1.2rem; 
         z-index: 99;
-        height: calc(100vh - 3.9rem);
-        cursor: pointer;
+        height: calc(100vh - 3.9rem); 
+        cursor: pointer; 
     }
 
+    /* Estilos adicionales para el logotipo en el menú de navegación móvil */
     .n-logo {
-        margin-left: 0;
+        margin-left: 0; 
     }
 
+    /* Estilos adicionales para la imagen del logotipo en el menú de navegación móvil */
     .logo-image {
-        margin-top: -5%;
-        margin-left: -5%;
+        margin-top: -5%; 
+        margin-left: -5%; 
     }
 
+    /* Estilos para los enlaces del menú de navegación móvil */
     .nm-menu a {
         margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-        cursor: pointer;
+        padding-bottom: 1rem; 
+        border-bottom: 1px solid var(--border-color); 
+        cursor: pointer; 
     }
 
+    /* Estilos para el botón de contacto en el menú de navegación móvil */
     .m-contact-button {
-        width: 100%;
-        background: #f49e2b;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        padding: 1rem 0rem;
-        border-radius: 999px;
+        width: 100%; 
+        background: #f49e2b; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        box-sizing: border-box; 
+        padding: 1rem 0rem; 
+        border-radius: 999px; 
         columns: var(--dark-bg);
-        color: var(--light-bg);
+        color: var(--light-bg); 
     }
 }
 
-/* Sticky styles for both big and small screens */
-
-
-
+/* Estilos de navgación sticky para pantallas grandes y pequeñas */
 .n-wrapper.sticky {
-    position: fixed;
-    background : linear-gradient(45deg, #0C2026, #192B32);
+    position: fixed; 
+    background-color: var(--secondary-color); 
     top: 0;
-    width: 100%;
-    
+    width: 100%; 
 }
 
+/* Estilos para el contenedor del menú de navegación sticky */
 .n-container.sticky {
-    color: whitesmoke;
-    padding: 1rem;
+    color: whitesmoke; 
+    padding: 1rem; 
 }
 
+/* Estilos para el menú de navegación móvil sticky */
 .nm-menu.sticky {
-    position: fixed;
-    top: 3.85rem;
-    padding: 3rem 2rem;
-    /* Add other styles for the sticky mobile menu as needed */
+    position: fixed; 
+    top: 3.85rem; 
+    padding: 3rem 2rem; 
 }
 
+/* Estilos generales del cuerpo del documento */
 body {
-    margin-top: 0;
+    margin-top: 0; /* Margen superior */
 }
 
+/* Espacio adicional después del contenedor del menú de navegación sticky */
 .n-wrapper.sticky + * {
-    margin-top: 3.9rem; /* Adjust this value to ensure content is not covered */
+    margin-top: 3.9rem; 
 }
 
-
+/* Media query para pantallas de hasta 1024px de ancho */
 @media (max-width: 1024px) {
-   
-    .n-wrapper{
-        background-image: url(/image.png);
-        width: 100%;
-        position: absolute;
-        z-index: 999;
-        background-size: cover;
-        
+    /* Estilos adicionales para el contenedor del menú de navegación */
+    .n-wrapper {
+        background-color: var(--secondary-color); 
+        width: 100%; 
+        position: absolute; 
+        z-index: 999; 
+        background-size: cover; 
     }
-      
-      
-      
-    
-  }
-  
+}

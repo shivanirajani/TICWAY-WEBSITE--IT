@@ -1,5 +1,6 @@
-/*EL CSS DEL BRANDING VIDEO*/
+/* ESTILOS CSS PARA EL VIDEO DE BRANDING */
 
+/* Estilo para el contenedor principal del video */
 .bv-container .container {
     display: flex;
     align-items: center;
@@ -7,6 +8,7 @@
     overflow: visible;
 }
 
+/* Estilo para el video en sí */
 .bv-video {
     width: 100%;
     border-radius: 4rem;
@@ -14,15 +16,16 @@
     z-index: 1;
 }
 
-@media (max-width: 1024) {
-    .bv-video{
+/* Estilos para pantallas con un ancho máximo de 1024px */
+@media (max-width: 1024px) {
+    .bv-video {
         margin-top: 1rem;
     }
 }
 
-@media (max-width: 768) {
-    .bv-video{
+/* Estilos para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .bv-video {
         border-radius: 2rem;
-       
     }
 }
