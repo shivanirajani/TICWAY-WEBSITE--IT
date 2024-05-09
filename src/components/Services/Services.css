@@ -1,7 +1,11 @@
+/* ESTILOS CSS PARA SERVICES (CARRUSEL) */
+
+/* Estilo del contenedor de servicios */
 .services-wrapper{
     padding-top: 10rem;
 }
 
+/* Estilo de las imágenes de los logos */
 .services-wrapper .logos-image {
     margin-right: 50px; 
     margin-left: 50px;

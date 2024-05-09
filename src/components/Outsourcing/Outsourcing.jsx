@@ -1,9 +1,15 @@
+{/**
+El componente de Outsourcing muestra información sobre qué es el outsourcing tecnológico, las especialidades de Ticway y el objetivo de Ticway. 
+Permite al usuario elegir qué sección desea leer. 
+Además, el contenido se ajusta automáticamente al tamaño de la pantalla y utiliza animaciones para hacer la experiencia más atractiva.
+ */}
+
 // Importaciones de módulos y componentes necesarios
 import React, { useState, useEffect } from "react";
 import "./Outsourcing.css"; 
 import { features } from "@/src/utils/data"; 
 import Image from "next/image"; 
-import { color, motion } from "framer-motion"; 
+import {  motion } from "framer-motion"; 
 import { titleVariants, tagVariants } from "@/src/utils/animation"; 
 import { FaDesktop, FaBullseye, FaBullhorn } from 'react-icons/fa'; 
 import Select, { components } from 'react-select'; 
