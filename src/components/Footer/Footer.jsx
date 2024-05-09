@@ -1,8 +1,14 @@
+/**
+ * Componente que representa el pie de página de la aplicación.
+ * Información de contacto y enlaces a redes sociales.
+ */
+
+// Importaciones de módulos y componentes necesarios
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
-// Componente para el pie de página
+
 const Footer = () => {
   // Estado para controlar la visibilidad del pie de página
   const [showFooter, setShowFooter] = useState(false);
@@ -35,6 +41,7 @@ const Footer = () => {
       {showFooter && (
         <footer className="footer">
           <div className="copyright">
+            {/* Derechos de autor */}
             <p>&copy; {currentYear} Ticway. Todos los derechos reservados.</p>
           </div>
           <div className="social-icons">

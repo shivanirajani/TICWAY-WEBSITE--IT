@@ -1,14 +1,19 @@
-const React = require("react");
-const { useRef, useState } = React;
-const { motion, useInView } = require("framer-motion");
-const { tagVariants } = require("@/src/utils/animation");
-const emailjs = require("@emailjs/browser");
-const { ToastContainer, toast } = require('react-toastify');
-require('react-toastify/dist/ReactToastify.css');
-require("./Contacto.css");
-const { FaClock, FaEnvelope, FaPhone } = require('react-icons/fa');
+{/**
+ * Este componente representa la sección de contacto en una aplicación web.
+ * Permite a los usuarios enviar consultas por correo electrónico a través de un formulario.
+ * Utiliza animaciones proporcionadas por Framer Motion para mejorar la experiencia del usuario.
+*/}
 
-// Variants para las animaciones de entrada
+// Importaciones de módulos y componentes necesarios
+import React, { useRef, useState} from "react";
+import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Contacto.css";
+import { tagVariants } from "@/src/utils/animation"; 
+
+// Animación para la constante variants
 const variants = {
   initial: {
     y: 500,
@@ -24,7 +29,7 @@ const variants = {
   },
 };
 
-// Variants para los elementos hijos de la animación
+// Animación para la constante itemVariants
 const itemVariants = {
   initial: {
     y: 20,
@@ -37,38 +42,45 @@ const itemVariants = {
 };
 
 
-
-// Componente principal de la sección de contacto
 const Contacto = () => {
+  // Referencia al elemento de la sección de contacto
   const ref = useRef();
+  // Referencia al formulario de contacto
   const formRef = useRef();
+  // Estado para manejar errores
   const [error, setError] = useState(false);
+  // Estado para manejar el éxito del envío del formulario
   const [success, setSuccess] = useState(false);
+  // Detecta si la sección de contacto está en la vista del usuario
   const isInView = useInView(ref, { margin: "-50px" });
 
   // Función para enviar el formulario por correo electrónico
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Use client: Envia el formulario usando el servicio de emailjs
     emailjs
-      .sendForm('service_qqdmnkh', 'template_51mkiil', formRef.current, 'MvnhYMURvIpaeH_0a')
-      .then(
-        (result) => {
-          toast.success("Su formulario se ha enviado correctamente. Nos comunicaremos pronto para atender sus consultas. ¡Gracias!");
-          setError(false); // Reinicia el estado de error
-          formRef.current.reset(); // Reinicia el formulario
-        },
-        (error) => {
-          toast.error("Lo sentimos, pero ha habido un problema al procesar su formulario. Por favor, inténtelo de nuevo");
-          setError(true);
-          setSuccess(false); // Reinicia el estado de éxito
-        }
-      );
+    .sendForm('service_qqdmnkh', 'template_51mkiil', formRef.current, 'MvnhYMURvIpaeH_0a')
+    .then(
+      // Si el formulario se envía correctamente, muestra un mensaje de éxito
+      (result) => {
+        toast.success("Su formulario se ha enviado correctamente. Nos comunicaremos pronto para atender sus consultas. ¡Gracias!");
+        setError(false); 
+        formRef.current.reset(); // Reinicia el formulario
+      },
+      // Si hay algún error al enviar el formulario, muestra un mensaje de error
+      (error) => {
+        toast.error("Lo sentimos, pero ha habido un problema al procesar su formulario. Por favor, inténtelo de nuevo");
+        setError(true);
+        setSuccess(false); 
+      }
+    );
   }
 
   // Renderiza la sección de contacto
   return (
     <div className="contacto-wrapper">
+      {/* Contenedor de la sección de contacto */}
       <motion.div
         ref={ref}
         className="contacto"
@@ -76,67 +88,28 @@ const Contacto = () => {
         initial="initial"
         animate="animate"
       >
+        {/* Contenedor de texto y tarjetas */}
         <div className="textContainer" variants={variants}>
           <div className="item" variants={itemVariants}>
+            {/* Título de la sección de contacto */}
             <motion.h1 ref={ref}>Contacto</motion.h1>
+            {/* Contenedor de mapas */}
             <div className="cardsContainer">
-              <motion.div
-                className="cards"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-              
-               <div className="iconAndTextContainer"> {/* Container for icon and text */}
-               <FaClock color="orange" size={30} style={{ marginRight: '10px' }} /> {/* Add margin to the right of the icon */}
-                  <h2 style={{ fontSize: '24px', margin: '0' }}>Horario:</h2>
-                </div>
-                <div className="additionalInfo">
-               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>Lunes y Jueves: 9:00 - 18:00</h3>
-               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>Viernes: 9:00 - 15:00</h3>
-      </div>
-        
-              </motion.div>
-              <motion.div
-                className="cards"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-       
-              <div className="iconAndTextContainer"> {/* Container for icon and text */}
-                  <FaEnvelope color="orange" size={30}  style={{ marginRight: '10px' }}/>
-                  <h2 style={{ fontSize: '24px', margin: '0' }}>Correo Electrónico:</h2>
-               </div>   
-                  <div className="additionalInfo">
-               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200"}}>info@ticway.com</h3>
-                </div>
-    
-  
-              </motion.div>
-              <motion.div
-                className="cards"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-         
-                <div className="iconAndTextContainer"> {/* Container for icon and text */}
-                  <FaPhone color="orange" size={30} style={{ marginRight: '10px' }}/>
-                  <h2 style={{ fontSize: '24px', margin: '0' }}>Teléfono:</h2>
-                 
-                  </div>   
-                  <div className="additionalInfo">
-               <h3 style={{ fontSize: '22px', marginLeft: '40px', fontWeight: "200" }}>945 12 80 60</h3>
-                </div>
-           
+              <motion.div variants={itemVariants}>
+                {/* Mapa de Google */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5850.795441431862!2d-2.6827597240230006!3d42.843334571152205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc21294130993%3A0xd7fc38ec295efb2d!2sTicway!5e0!3m2!1ses!2ses!4v1714820071910!5m2!1ses!2ses" 
+                  loading="lazy" title="Google Map"
+                ></iframe>
               </motion.div>
             </div>
           </div>
           <div className="item" variants={itemVariants}>
           </div>
         </div>
+        {/* Contenedor del formulario */}
         <div className="formContainer">
+          {/* SVG de teléfono */}
           <motion.div
             className="phoneSvg"
             initial={{ opacity: 1 }}
@@ -166,6 +139,7 @@ const Contacto = () => {
               />
             </motion.svg>
           </motion.div>
+          {/* Formulario de contacto */}
           <motion.form
             ref={formRef}
             onSubmit={sendEmail}
@@ -173,6 +147,7 @@ const Contacto = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
           >
+            {/* Mensaje informativo */}
             <motion.span
               variants={tagVariants}
               initial="offscreen"
@@ -182,6 +157,8 @@ const Contacto = () => {
             >
               Contamos con expertos para tu servicio
             </motion.span>
+
+            {/* Campos de entrada de datos del formulario */}
             <input type="text" required placeholder="Nombre" name="nombre" />
             <input type="text" required placeholder="Apellidos" name="apellidos" />
             <input
@@ -192,14 +169,17 @@ const Contacto = () => {
             />
             <input type="text" required placeholder="Asunto" name="asunto" />
             <textarea rows={8} required placeholder="Mensaje" name="mensaje" />
+
+            {/* Botón para enviar el formulario */}
             <button>Enviar</button>
           </motion.form>
+
         </div>
       </motion.div>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+      {/* Contenedor de notificaciones */}
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
 };
 
-module.exports = Contacto;
+export default Contacto;

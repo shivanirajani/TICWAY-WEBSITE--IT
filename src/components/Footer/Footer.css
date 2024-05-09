@@ -1,69 +1,74 @@
-/* El CSS del Footer (Pie de Página)*/
+/* El CSS del Footer (Pie de Página) */
 
+/* Estilo del contenedor del pie de página */
 .footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    
+  background-color: var(--secondary-color); 
+  color: #fff; 
+  padding: 10px; 
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
 
+/* Estilo del texto de derechos de autor */
+.copyright {
+  font-size: 18px; 
+  margin-left: 80px; 
+  margin-bottom: 20px; 
+}
+
+/* Estilo de los iconos sociales */
+.social-icons {
+  display: flex; 
+  align-items: center; 
+  margin-right: 100px; 
+}
+
+/* Estilo de los enlaces de los iconos sociales */
+.social-icons a {
+  color: #fff; 
+  text-decoration: none; 
+  margin-right: 30px; 
+  margin-bottom: 20px; 
+}
+
+/* Estilo de los iconos de redes sociales */
+.social-icons i {
+  font-size: 24px; 
+}
+
+@media (max-width: 600px) {
+  /* Estilos para pantallas más pequeñas */
+  .footer {
+      flex-direction: column; 
+      align-items: center; 
+      margin-top: 100px; 
   }
-  
+
+  /* Estilo del texto de derechos de autor para pantallas más pequeñas */
   .copyright {
-    font-size: 18px;
-    margin-left: 80px;
-    margin-bottom: 20px;
-  }
-  
-  .social-icons {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 30px; 
-    margin-bottom: 20px;
-  }
-  
-  .social-icons i {
-    font-size: 24px; 
-  }
-  
-
-  @media (max-width: 600px) {
-    .footer {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 100px;
- 
-    }
-  
-    .copyright {
-      margin: 10px 0;
-      text-align: center;
+      margin: 10px 0; 
+      text-align: center; 
       font-size: 18px; 
-      margin-right: 20px;
-    }
-  
-    .social-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-right: 20px; 
+  }
+
+  /* Estilo de los iconos sociales para pantallas más pequeñas */
+  .social-icons {
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
       flex-direction: row;
       margin-bottom: 20px;
-      margin-top: -2%;
-      margin-left: 90px;
-    }
-  
-    .social-icons a {
-      margin: 0 10px; 
-    }
+      margin-top: -2%; 
+      margin-left: 90px; 
   }
+
+  /* Estilo de los enlaces de los iconos sociales para pantallas más pequeñas */
+  .social-icons a {
+      margin: 0 10px; 
+  }
+}

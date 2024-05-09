@@ -1,198 +1,191 @@
-/* Soluciones.css */
-
+/* Contenedor principal de las soluciones */
 .soluciones-container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-top: 10rem;
+  position: relative; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+  padding-top: 10rem; 
+
 }
 
+/* Encabezado de las soluciones */
 .soluciones-head {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  max-width: 70rem;
-  margin: auto;
-  color: #ffa600;
-  margin-bottom: 20px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem; 
+  align-items: center; 
+  max-width: 70rem; 
+  margin: auto; 
+  color: #ffa600; 
+  margin-bottom: 20px; 
 }
 
+/* Contenedor de características de las soluciones */
 .soluciones-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6rem;
-  justify-content: space-between;
-  padding-top: 10rem;
- 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6rem; /* Espacio entre elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos de manera uniforme */
+  padding-top: 10rem; /* Espaciado superior */
 }
 
+/* Característica individual de las soluciones */
 .soluciones-feature {
-  max-width: 45rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(51, 51, 51, 0.5);
-  border: 4px solid #fff;
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
-  width: 200%; /* Increase the width value as needed */
-  margin-bottom: 20px;
-  
+  max-width: 45rem; /* Ancho máximo */
+  display: flex; /* Establece la visualización como flex */
+  flex-direction: column; /* Establece la dirección de los elementos secundarios como columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  background-color: rgba(51, 51, 51, 0.5); /* Color de fondo con transparencia */
+  border: 4px solid #fff; /* Borde sólido */
+  border-radius: 2rem; /* Radio de borde */
+  padding: 0.5rem 1rem; /* Relleno */
+  width: 200%; /* Aumenta el valor de ancho según sea necesario */
+  margin-bottom: 20px; /* Espaciado inferior */
+  height: 500px;
 }
 
-
-
+/* Ajustes para cada segundo elemento */
 .soluciones-feature:nth-child(2n) {
-  margin-left: auto; /* Push every even item to the right */
+  margin-left: auto; /* Empuja cada elemento par hacia la derecha */
 }
 
-
+/* Ajustes para la posición de la imagen en elementos impares y pares */
 .soluciones-feature:nth-child(odd) .image-container {
-  position: absolute;
-  right:  0;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-top: 60px;
+  position: absolute; /* Establece la posición absoluta */
+  right:  0; /* Alinea a la derecha */
+  margin-top: 60px; /* Espaciado superior */
+  margin-left: 20px; /* Espaciado izquierdo */
 }
 
 .soluciones-feature:nth-child(even) .image-container {
-  position: absolute;
-  left: 0;
-  margin-right: 20px;
-  margin-top: 10px;
-  
+  position: absolute; /* Establece la posición absoluta */
+  left: 0; /* Alinea a la izquierda */
+  margin-right: 20px; /* Espaciado derecho */
+  margin-top: 10px; /* Espaciado superior */
 }
 
+/* Estilos de la imagen */
 .soluciones-feature .image-container img {
-  width: 450px;
-  height: 600px; /* Adjust the height as needed */
-  object-fit: cover;
-  margin-top: -10%;
-  
-
+  width: 450px; /* Ancho de la imagen */
+  height: 600px; /* Alto de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
+  margin-top: -10%; /* Ajusta el posicionamiento vertical */
 }
 
+/* Estilos específicos para cada imagen */
 .soluciones-feature:nth-child(1) .image-container img {
-  width: 450px;
-  height: 600px; /* Adjust the height as needed */
-  object-fit: cover;
-  margin-top: -20%;
-  
-
+  width: 450px; /* Ancho de la imagen */
+  height: 600px; /* Alto de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
+  margin-top: -20%; /* Ajusta el posicionamiento vertical */
 }
 
 .soluciones-feature:nth-child(2) .image-container img {
-  width: 450px;
-  height: 570px; /* Adjust the height as needed */
-  object-fit: cover;
-  margin-top: -10%;
-  
-
+  width: 450px; /* Ancho de la imagen */
+  height: 570px; /* Alto de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
+  margin-top: -10%; /* Ajusta el posicionamiento vertical */
 }
 
 .soluciones-feature:nth-child(3) .image-container img {
-  width: 450px;
-  height: 570px; /* Adjust the height as needed */
-  object-fit: cover;
-  margin-top: -20%;
-  
-
+  width: 450px; /* Ancho de la imagen */
+  height: 570px; /* Alto de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
+  margin-top: -20%; /* Ajusta el posicionamiento vertical */
 }
 
 .soluciones-feature:nth-child(4) .image-container img {
-  width: 450px;
-  height: 570px; /* Adjust the height as needed */
-  object-fit: cover;
-  margin-top: -10%;
-  
-
+  width: 450px; /* Ancho de la imagen */
+  height: 570px; /* Alto de la imagen */
+  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
+  margin-top: -10%; /* Ajusta el posicionamiento vertical */
 }
 
-
-
-
+/* Detalles de la característica */
 .soluciones-feature .detail {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 30px;
+  display: flex; /* Establece la visualización como flex */
+  flex-direction: column; /* Establece la dirección de los elementos secundarios como columna */
+  align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+  margin: 30px; /* Espaciado */
 }
 
+/* Ajustes para diferentes tamaños de pantalla */
 @media (max-width: 550px) {
   .soluciones-container {
-    padding-top: 5rem;
+    padding-top: 5rem; /* Ajusta el espaciado superior */
+    align-items: center;
+
   }
 
+ 
+
+
   .soluciones-features {
-    justify-content: center; /* Center features on smaller screens */
+    justify-content: center; /* Centra las características en pantallas pequeñas */
+
   }
 
   .soluciones-feature .image-container {
-    display: none;
+    display: none; /* Oculta las imágenes en pantallas pequeñas */
   }
 
   .soluciones-feature .detail {
-    margin-bottom: 20px; /* Add space between text and image on small screens */
+    margin-bottom: 20px; /* Agrega espacio entre texto e imagen en pantallas pequeñas */
   }
 
   .soluciones-feature {
-    width: 90%; /* Adjust width for small screens */
-    max-width: none; /* Reset max-width for small screens */
-    margin: 20px auto; /* Center elements horizontally */
+    width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+    max-width: none; /* Reinicia el ancho máximo para pantallas pequeñas */
+    margin: 10px auto; /* Centra los elementos horizontalmente */
+  
   }
 
   .soluciones-feature {
-    flex-direction: column; /* Change direction to column for iPad layout */
-    align-items: center; /* Center items horizontally */
-    margin-bottom: 40px; /* Add some space between features */
-    width: 300px; 
-    margin: 40px;
-    height: 900px;
-    background-color: rgba(51, 51, 51, 0.5);
-    border: solid #fff;
-    border-radius: 0;
-    padding: 20px;
-
+    flex-direction: column; /* Cambia la dirección a columna para diseño de iPad */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 40px; /* Agrega espacio entre características */
+    width: 300px; /* Ancho */
+    height: 800px; /* Alto */
+    background-color: rgba(51, 51, 51, 0.5); /* Color de fondo */
+    border: solid #fff; /* Borde */
+    border-radius: 0; /* Radio de borde */
+    padding: 10px; /* Relleno */
+  
   }
 
   .soluciones-feature .image-container img {
-    display: none;
+    display: none; /* Oculta las imágenes */
    }
  
-   .soluciones-feature:nth-child(1) {
-     margin-top: 0; /* Reset margin for first element on iPads */
-   }
+  .soluciones-feature:nth-child(1) {
+    margin-top: 0; /* Reinicia el margen para el primer elemento en iPads */
+  }
  
-   .soluciones-feature:nth-child(even) {
-     margin-right: -5px; /* Reset margin for even elements on iPads */
-   }
+  .soluciones-feature:nth-child(even) {
+    margin-right: -10px; /* Reinicia el margen para los elementos pares en iPads */
+  }
 }
-
 
 @media (max-width: 1024px) {
   .soluciones-container {
-    padding-top: 8rem; /* Adjust padding for iPads */
+    padding-top: 8rem; /* Ajusta el espaciado superior para iPads */
   }
 
   .soluciones-feature {
-    flex-direction: column; /* Change direction to column for iPad layout */
-    align-items: center; /* Center items horizontally */
-    margin-bottom: 40px; /* Add some space between features */
-   
-
+    flex-direction: column; /* Cambia la dirección a columna para diseño de iPad */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 40px; /* Agrega espacio entre características */
   }
 
   .soluciones-feature .image-container img {
-   display: none;
+   display: none; /* Oculta las imágenes */
   }
 
   .soluciones-feature:nth-child(1) {
-    margin-top: 0; /* Reset margin for first element on iPads */
+    margin-top: 0; /* Reinicia el margen para el primer elemento en iPads */
   }
 
   .soluciones-feature:nth-child(even) {
-    margin-left: 0; /* Reset margin for even elements on iPads */
+    margin-left: 0; 
   }
 }
