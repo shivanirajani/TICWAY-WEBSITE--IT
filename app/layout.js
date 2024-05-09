@@ -2,7 +2,7 @@
 import "./globals.css";
 
 // Importar la fuente Manrope desde Google Fonts
-import{Manrope} from "next/font/google"
+import{Urbanist} from "next/font/google"
 
 
 
@@ -13,8 +13,8 @@ export const metadata = {
 };
 
 
-// Configuración de la fuente Manrope
-const Manropefont = Manrope({
+// Configuración de la fuente Urbanist
+const Urbanistfont = Urbanist({
   subsets: ["latin"],
   weight: [ '200' ,'300' , '400' , '500' , '600' , '700'],
   display: "swap"
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
 />
       </head>
         {/* Cuerpo de la página con la clase de la fuente Manrope */}
-      <body className={Manropefont.className}>{children}</body>
+      <body className={Urbanistfont.className}>{children}</body>
     </html>
   );
 }

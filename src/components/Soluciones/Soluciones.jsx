@@ -80,8 +80,8 @@ const Soluciones = ({ imageSrc, description }) => {
                     }}
                   >
                     {/* Número de la solución */}
-                    <span className='des' style={{ color: "orange"  }}>
-                      <span style={{ fontSize: '1.5rem'}}>0{i + 1}</span>
+                    <span className='des' style={{ color: "orange", fontWeight: "bold"  }}>
+                      <span style={{ fontSize: '2rem'}}>0{i + 1}</span>
                     </span>
                     {/* Título de la solución */}
                     <span className='sec-title' style={{ color: "#fafafa", textAlign: "left", fontWeight: "bold"}}>
@@ -89,7 +89,7 @@ const Soluciones = ({ imageSrc, description }) => {
                     </span>
                     {/* Descripción de la solución */}
                     <span className='text' style={{ color: "#fafafa" }}>
-                      <span style={{ fontSize: '1rem', lineHeight: "0" }}>{feature.des}</span>
+                      <span style={{ fontSize: '18px', lineHeight: "0" }}>{feature.des}</span>
                     </span>
                     {/* Beneficios de la solución mostrados como puntos */}
                     <ul style={{ paddingInlineStart: '20px', fontSize: '0.2rem' }}>

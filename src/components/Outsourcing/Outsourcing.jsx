@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Outsourcing.css"; 
 import { features } from "@/src/utils/data"; 
 import Image from "next/image"; 
-import { motion } from "framer-motion"; 
+import { color, motion } from "framer-motion"; 
 import { titleVariants, tagVariants } from "@/src/utils/animation"; 
 import { FaDesktop, FaBullseye, FaBullhorn } from 'react-icons/fa'; 
 import Select, { components } from 'react-select'; 
@@ -113,6 +113,7 @@ const Outsourcing = () => {
               initial="offscreen"
               animate="onscreen"
               variants={contentVariants}
+              style={{color: "orange"}}
               className={`sec-titles ${isSmallScreen ? 'left-align' : ''}`}
             >
               Outsourcing Tecnológico
@@ -122,6 +123,7 @@ const Outsourcing = () => {
               initial="offscreen"
               animate="onscreen"
               variants={contentVariants}
+              style={{fontWeight: "400"}}
               className="texts"
             >
               Outsourcing Tecnológico es confiar la administración de tus TICs a expertos externos. Descubre los beneficios: delega la gestión de tus servicios de Tecnologías de la Información a profesionales especializados. Satisface eficientemente las necesidades tecnológicas de tu empresa, optimiza recursos y fortalece tu posición en el mercado con nuestro servicio de Outsourcing Tecnológico.
@@ -153,6 +155,7 @@ const Outsourcing = () => {
               initial="offscreen"
               animate="onscreen"
               variants={contentVariants}
+              style={{color: "orange"}}
               className={`sec-titles ${isSmallScreen ? 'left-align' : ''}`}
             >
               Nuestras Especialidades
@@ -162,6 +165,7 @@ const Outsourcing = () => {
               initial="offscreen"
               animate="onscreen"
               variants={contentVariants}
+              style={{fontWeight: "400"}}
               className="texts"
             >
               En la era interconectada, la adopción tecnológica es crucial. TICWAY brinda soluciones personalizadas, colaborando estrechamente contigo. Nuestro equipo especializado optimiza eficientemente los recursos, permitiéndote enfocarte en lo esencial de tu negocio, mientras nosotros nos encargamos de lo demás con profesionalismo y dedicación.
@@ -194,6 +198,7 @@ const Outsourcing = () => {
                 initial="offscreen"
                 animate="onscreen"
                 variants={contentVariants}
+                style={{color: "orange"}}
                 className={`sec-titles ${isSmallScreen ? 'left-align' : ''}`}
               >
                 El Objectivo de Ticway
@@ -204,6 +209,7 @@ const Outsourcing = () => {
               initial="offscreen"
               animate="onscreen"
               variants={contentVariants}
+              style={{fontWeight: "400"}}
               className="texts"
             >
               En nuestra sociedad interconectada, Ticway es esencial para abordar dependencias tecnológicas y mejorar la competitividad. Ignorarlas resulta en pérdida de competitividad y soluciones perjudiciales a corto plazo. La disminución de productividad, subestimada al principio, se vuelve más impactante. Ticway ofrece asesoramiento en TIC, clave para enfrentar desafíos y aprovechar oportunidades, siendo una estrategia inteligente para el éxito a largo plazo en un entorno interconectado.

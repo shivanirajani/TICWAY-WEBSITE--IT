@@ -67,7 +67,7 @@
 /* Estilos de la imagen */
 .soluciones-feature .image-container img {
   width: 450px; /* Ancho de la imagen */
-  height: 600px; /* Alto de la imagen */
+  height: 500px; /* Alto de la imagen */
   object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
   margin-top: -10%; /* Ajusta el posicionamiento vertical */
 }
@@ -106,7 +106,7 @@
   display: flex; /* Establece la visualización como flex */
   flex-direction: column; /* Establece la dirección de los elementos secundarios como columna */
   align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
-  margin: 30px; /* Espaciado */
+  margin: 20px; /* Espaciado */
 }
 
 /* Ajustes para diferentes tamaños de pantalla */
@@ -145,10 +145,10 @@
     align-items: center; /* Centra los elementos horizontalmente */
     margin-bottom: 40px; /* Agrega espacio entre características */
     width: 300px; /* Ancho */
-    height: 800px; /* Alto */
+    height: 720px; /* Alto */
     background-color: rgba(51, 51, 51, 0.5); /* Color de fondo */
     border: solid #fff; /* Borde */
-    border-radius: 0; /* Radio de borde */
+    border-radius: 0.8rem; /* Radio de borde */
     padding: 10px; /* Relleno */
   
   }
@@ -182,7 +182,19 @@
   }
 
   .soluciones-feature:nth-child(1) {
-    margin-top: 0; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: -100px; /* Reinicia el margen para el primer elemento en iPads */
+  }
+
+  .soluciones-feature:nth-child(2) {
+    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
+  }
+
+  .soluciones-feature:nth-child(3) {
+    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
+  }
+
+  .soluciones-feature:nth-child(4) {
+    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
   }
 
   .soluciones-feature:nth-child(even) {

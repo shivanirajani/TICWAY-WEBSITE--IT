@@ -174,6 +174,8 @@ const Contacto = () => {
             <button>Enviar</button>
           </motion.form>
 
+          <br></br>       <br></br>
+
         </div>
       </motion.div>
       {/* Contenedor de notificaciones */}

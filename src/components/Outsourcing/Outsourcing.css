@@ -105,6 +105,7 @@
 .selection-container .section-container.active span {
   color: var(--secondary-color);
   font-weight: 600;
+
 }
 
 /* Estilo del contenedor de iconos */
@@ -128,7 +129,7 @@
   justify-content: center;
   padding: 0.5rem;
   transition: background-color 0.3s ease;
-  margin: 20px;
+  margin: 10px;
   margin-top: 50px;
 }
 
@@ -141,7 +142,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 300px;
-  padding: 50px;
+  padding: 20px;
   margin: 20px auto;
   min-height: 10px;
   border: 1px;
@@ -204,6 +205,7 @@
 @media only screen and (max-width: 768px) {
   .outsourcing-content-container {
     flex-direction: column;
+   
   }
   .outsourcing-wrapper {
     padding-top: 10rem;
