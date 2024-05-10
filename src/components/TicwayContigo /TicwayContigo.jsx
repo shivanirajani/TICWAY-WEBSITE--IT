@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import "./TicwayContigo.css";
 import SlickSlider from './SlickSlider'; 
-import Image from "next/image";
 import { tagVariants, titleVariants } from "@/src/utils/animation";
 
 const TicwayContigo = () => {

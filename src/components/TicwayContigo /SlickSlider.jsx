@@ -10,7 +10,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import "./TicwayContigo.css";
 import { motion } from "framer-motion";
-import { tagVariants, titleVariants } from "@/src/utils/animation";
+import { tagVariants } from "@/src/utils/animation";
 import { ticway } from "@/src/utils/data";
 
 const SlickSlider = ({ features }) => {

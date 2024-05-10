@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {  useMotionValueEvent, useScroll } from "framer-motion";
 import { Link } from "react-scroll";
 import Image from "next/image";
 

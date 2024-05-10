@@ -5,7 +5,7 @@ Cada solución incluye un título, una descripción, una lista de beneficios y u
 Además, utiliza animaciones utilizando Framer Motion para hacerlo más dinámico y atractivo visualmente.
  */}
 // Importaciones de módulos y componentes necesarios
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion'; 
 import Image from 'next/image'; 
 import './Soluciones.css'; 
