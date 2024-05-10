@@ -1,14 +1,18 @@
+/* Estilos para el contenedor principal de Ticway Conigo */
 .ticway-wrapper {
   padding-top: 20rem;
 }
 
+
+/* Estilos para el contenedor secundario de Ticway Contigo */
 .ticway-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-top: 2rem; /* Add padding-top to ticway-container in all media */
+  padding-top: 2rem; 
 }
 
+/* Estilos para la cabecera de Ticway Contigo*/
 .ticway-head {
   display: flex;
   flex-direction: column;
@@ -20,23 +24,38 @@
   font-size: 2.2rem;
 }
 
+
+
+/* Estilos para el slider */
+
 .slick-slider {
   margin-top: 9rem;
 }
+
+
+/* Estilos para la pista del slider */
 
 .slick-track {
   padding: 4rem 0rem;
 }
 
+
+/* Estilos para los elementos de cada slide */
 .slick-slide > div {
   padding: 0 20px;
-  height: 100%; /* Ensure the container takes full height of the slide */
+  height: 100%; 
 }
+
+
+/* Estilos para los puntos de navegación del slider */
 
 .slick-dots {
-  bottom: 0px!important; /* Adjust the value as needed */
+  bottom: 0px!important; 
 }
 
+
+
+/* Estilos para los puntos de navegación del slider, ofreciendo una mayor personalización */
 .slick-dots .custom-dots {
   width: 6px;
   height: 6px;
@@ -47,7 +66,7 @@
 
 
 
-
+/* Estilos para la característica */
 .ticway-feature {
   display: flex !important;
   flex-direction: column;
@@ -65,28 +84,35 @@
 
 }
 
+/* Estilos para el contenido */
 .ticway-content {
   display: flex;
   align-items: center; 
   flex-direction: column;
   gap: 0.5rem;
   text-align: center; 
+  
 }
+
+
+/* Estilos para el título para cada sección */
 
 .ticway-content .sec-title {
   text-align: center; 
   
 }
 
+/* Estilos para el texto */
 .ticway-content .text {
   text-align: left; 
+  font-weight: 400;
 }
 
 
 
  
   
-  
+  /* Estilos para dispositivos con ancho máximo de 550px */
   @media (max-width: 550px) {
     .ticway-feature {
       width: 80%;
@@ -100,7 +126,7 @@
     }
   }
 
-
+  /* Estilos para dispositivos con ancho máximo de 768px */
   @media (max-width: 768px) {
     .ticway-feature {
       background-color: var(--secondary-color);
@@ -132,48 +158,31 @@
 } 
 
 
-  @media (min-width: 1200px) {
-    .slick-slide.slick-active.slick-current + .slick-slide .ticway-feature{
-      transition: all 1000ms ease-out;
-      scale: 1.1;
-      transform: translateY(-30px);
-      background-color: var(--secondary-color);
-      
-   
-  
-
-
-      
-    
-
-
-    }
-
-  
-    
-
-
-    .slick-slide.slick-active.slick-current + .slick-slide .sec-title{
-       color: white;
-    }
-
-
-    .slick-slide.slick-active.slick-current + .slick-slide .text{
-      color: white;
-   }
-
-
+ /* Estilos para dispositivos con ancho mínimo de 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para animación y el estilo solo para el slide activo (el slide que está en el medio) */
+  .slick-slide.slick-active.slick-current + .slick-slide .ticway-feature {
+    transition: all 1000ms ease-out;
+    scale: 1.1;
+    transform: translateY(-30px);
+    background-color: var(--secondary-color);
     
   }
-
-
-  @media (max-width: 1024px) {
-
-    .ticway-wrapper{
-      padding-top: 80rem;
+  .slick-slide.slick-active.slick-current + .slick-slide .sec-title {
+    color: white;
   }
+  .slick-slide.slick-active.slick-current + .slick-slide .text {
+    color: white;
+    font-weight: 500;
+  }
+}
 
-  .ticway-feature{
+/* Estilos para dispositivos con ancho máximo de 1024px */
+@media (max-width: 1024px) {
+  .ticway-wrapper {
+    padding-top: 80rem; 
+  }
+  .ticway-feature {
     margin-top: 100px;
     display: flex !important;
     flex-direction: column;
@@ -184,29 +193,19 @@
     gap: 3rem;
     height: 600px; 
     width: 500px; 
-    
   }
-
   .ticway-content {
-   margin-top: 50px;
+    margin-top: 50px;
   }
-  
   .ticway-content .sec-title {
     margin-top: 30px;
     font-size: 1.5rem;
     font-weight: bold;
-
-    
   }
-  
   .ticway-content .text {
     text-align: left; 
     margin: 20px;
     margin-top: 60px;
     font-size: 1rem;
   }
-  
-   
-  }
-  
-  
+}
