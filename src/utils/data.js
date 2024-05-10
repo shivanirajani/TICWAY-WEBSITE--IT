@@ -1,4 +1,11 @@
+{/**
+El código proporciona datos estructurados para diversas secciones de la página web. 
 
+Separar los datos en un archivo aparte facilita la organización, legibilidad y reutilización del código, además de simplificar la escalabilidad del proyecto. 
+Esta práctica mejora de manera notable la estructura y el mantenimiento de los proyectos de software.
+*/}
+
+// Datos para la sección de héroe que contiene imágenes y colores de fondo
 
 export const HeroData = [
   {
@@ -33,6 +40,8 @@ export const HeroData = [
   },
 ];
 
+
+// Datos para la sección de características que contiene iconos y títulos
 export const features = [
   {
     icon: "/features/tecnologias.png",
@@ -86,6 +95,8 @@ export const features = [
 
 ];
 
+
+// Datos para la sección Ticway Contigo que contiene iconos, títulos y descripciones
 export const ticway = [
   {
     icon: "/TicwayContigo/image7.png",
@@ -122,6 +133,8 @@ export const ticway = [
 
 ];
 
+
+// Datos para la sección Soluciones Outsourcing  que contiene iconos, títulos, descripciones y beneficios
 export const soluciones = [
   {
     icon: "/soluciones1.jpg",
