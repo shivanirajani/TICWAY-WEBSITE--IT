@@ -1,3 +1,4 @@
+/* ESTILOS CSS PARA SOLUCIONES OUTSOURCING */
 /* Contenedor principal de las soluciones */
 .soluciones-container {
   position: relative; 
@@ -24,104 +25,109 @@
 .soluciones-features {
   display: flex; 
   flex-wrap: wrap; 
-  gap: 6rem; /* Espacio entre elementos */
-  justify-content: space-between; /* Distribuye el espacio entre los elementos de manera uniforme */
-  padding-top: 10rem; /* Espaciado superior */
+  gap: 6rem; 
+  justify-content: space-between; 
+  padding-top: 10rem; 
 }
 
-/* Característica individual de las soluciones */
+/*Estilo para cada tarjeta de soluciones*/
 .soluciones-feature {
-  max-width: 45rem; /* Ancho máximo */
-  display: flex; /* Establece la visualización como flex */
-  flex-direction: column; /* Establece la dirección de los elementos secundarios como columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  background-color: rgba(51, 51, 51, 0.5); /* Color de fondo con transparencia */
-  border: 4px solid #fff; /* Borde sólido */
-  border-radius: 2rem; /* Radio de borde */
-  padding: 0.5rem 1rem; /* Relleno */
-  width: 200%; /* Aumenta el valor de ancho según sea necesario */
-  margin-bottom: 20px; /* Espaciado inferior */
+  max-width: 45rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.5); 
+  border: 4px solid #fff; 
+  border-radius: 2rem; 
+  padding: 0.5rem 1rem; 
+  width: 200%; 
+  margin-bottom: 20px; 
   height: 500px;
 }
 
 /* Ajustes para cada segundo elemento */
 .soluciones-feature:nth-child(2n) {
-  margin-left: auto; /* Empuja cada elemento par hacia la derecha */
+  margin-left: auto; 
 }
 
-/* Ajustes para la posición de la imagen en elementos impares y pares */
+/* Ajustes para la posición de la imagen en elementos impares */
 .soluciones-feature:nth-child(odd) .image-container {
-  position: absolute; /* Establece la posición absoluta */
-  right:  0; /* Alinea a la derecha */
-  margin-top: 60px; /* Espaciado superior */
-  margin-left: 20px; /* Espaciado izquierdo */
+  position: absolute; 
+  right:  0; 
+  margin-top: 60px; 
+  margin-left: 20px; 
 }
 
+/* Ajustes para la posición de la imagen en elementos pares */
 .soluciones-feature:nth-child(even) .image-container {
-  position: absolute; /* Establece la posición absoluta */
-  left: 0; /* Alinea a la izquierda */
-  margin-right: 20px; /* Espaciado derecho */
-  margin-top: 10px; /* Espaciado superior */
+  position: absolute; 
+  left: 0; 
+  margin-right: 20px; 
+  margin-top: 10px; 
 }
 
-/* Estilos de la imagen */
+/* Estilos para el contenedo de imágenes*/
 .soluciones-feature .image-container img {
-  width: 450px; /* Ancho de la imagen */
-  height: 500px; /* Alto de la imagen */
-  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
-  margin-top: -10%; /* Ajusta el posicionamiento vertical */
+  width: 450px; 
+  height: 500px; 
+  object-fit: cover; 
+  margin-top: -10%; 
 }
 
 /* Estilos específicos para cada imagen */
+/*Primera Imagen*/
 .soluciones-feature:nth-child(1) .image-container img {
-  width: 450px; /* Ancho de la imagen */
-  height: 600px; /* Alto de la imagen */
-  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
-  margin-top: -20%; /* Ajusta el posicionamiento vertical */
+  width: 450px;
+  height: 600px; 
+  object-fit: cover; 
+  margin-top: -20%; 
 }
 
+/*Segunda Imagen*/
 .soluciones-feature:nth-child(2) .image-container img {
-  width: 450px; /* Ancho de la imagen */
-  height: 570px; /* Alto de la imagen */
-  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
-  margin-top: -10%; /* Ajusta el posicionamiento vertical */
+  width: 450px; 
+  height: 570px; 
+  object-fit: cover; 
+  margin-top: -10%; 
 }
 
+/*Tercera Imagen*/
 .soluciones-feature:nth-child(3) .image-container img {
-  width: 450px; /* Ancho de la imagen */
-  height: 570px; /* Alto de la imagen */
-  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
-  margin-top: -20%; /* Ajusta el posicionamiento vertical */
+  width: 450px; 
+  height: 570px; 
+  object-fit: cover; 
+  margin-top: -20%; 
 }
 
+
+/*Cuarta Imagen*/
 .soluciones-feature:nth-child(4) .image-container img {
-  width: 450px; /* Ancho de la imagen */
-  height: 570px; /* Alto de la imagen */
-  object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto y recortándola si es necesario */
-  margin-top: -10%; /* Ajusta el posicionamiento vertical */
+  width: 450px; 
+  height: 570px; 
+  object-fit: cover; 
+  margin-top: -10%; 
 }
 
-/* Detalles de la característica */
+/* Estilo para los detalles de cada tarjeta de soluciones */
 .soluciones-feature .detail {
-  display: flex; /* Establece la visualización como flex */
-  flex-direction: column; /* Establece la dirección de los elementos secundarios como columna */
-  align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
-  margin: 20px; /* Espaciado */
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin: 20px; 
 }
 
 /* Ajustes para diferentes tamaños de pantalla */
+
 @media (max-width: 550px) {
   .soluciones-container {
-    padding-top: 5rem; /* Ajusta el espaciado superior */
+    padding-top: 5rem; 
     align-items: center;
 
   }
 
  
-
-
   .soluciones-features {
-    justify-content: center; /* Centra las características en pantallas pequeñas */
+    justify-content: center; 
 
   }
 
@@ -130,26 +136,26 @@
   }
 
   .soluciones-feature .detail {
-    margin-bottom: 20px; /* Agrega espacio entre texto e imagen en pantallas pequeñas */
+    margin-bottom: 20px; 
   }
 
   .soluciones-feature {
-    width: 90%; /* Ajusta el ancho para pantallas pequeñas */
-    max-width: none; /* Reinicia el ancho máximo para pantallas pequeñas */
-    margin: 10px auto; /* Centra los elementos horizontalmente */
+    width: 90%; 
+    max-width: none; 
+    margin: 10px auto; 
   
   }
 
   .soluciones-feature {
-    flex-direction: column; /* Cambia la dirección a columna para diseño de iPad */
-    align-items: center; /* Centra los elementos horizontalmente */
-    margin-bottom: 40px; /* Agrega espacio entre características */
-    width: 300px; /* Ancho */
-    height: 720px; /* Alto */
-    background-color: rgba(51, 51, 51, 0.5); /* Color de fondo */
-    border: solid #fff; /* Borde */
-    border-radius: 0.8rem; /* Radio de borde */
-    padding: 10px; /* Relleno */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 40px; 
+    width: 300px; 
+    height: 720px; 
+    background-color: rgba(51, 51, 51, 0.5); 
+    border: solid #fff; 
+    border-radius: 0.8rem; 
+    padding: 10px; 
   
   }
 
@@ -158,23 +164,24 @@
    }
  
   .soluciones-feature:nth-child(1) {
-    margin-top: 0; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: 0; 
   }
  
   .soluciones-feature:nth-child(even) {
-    margin-right: -10px; /* Reinicia el margen para los elementos pares en iPads */
+    margin-right: -10px; 
   }
 }
 
+/* Ajustes para diferentes tamaños de pantalla (tablet) */
 @media (max-width: 1024px) {
   .soluciones-container {
-    padding-top: 8rem; /* Ajusta el espaciado superior para iPads */
+    padding-top: 8rem; 
   }
 
   .soluciones-feature {
-    flex-direction: column; /* Cambia la dirección a columna para diseño de iPad */
-    align-items: center; /* Centra los elementos horizontalmente */
-    margin-bottom: 40px; /* Agrega espacio entre características */
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 40px; 
   }
 
   .soluciones-feature .image-container img {
@@ -182,19 +189,19 @@
   }
 
   .soluciones-feature:nth-child(1) {
-    margin-top: -100px; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: -100px; 
   }
 
   .soluciones-feature:nth-child(2) {
-    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: -80px; 
   }
 
   .soluciones-feature:nth-child(3) {
-    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: -80px; 
   }
 
   .soluciones-feature:nth-child(4) {
-    margin-top: -80px; /* Reinicia el margen para el primer elemento en iPads */
+    margin-top: -80px; 
   }
 
   .soluciones-feature:nth-child(even) {

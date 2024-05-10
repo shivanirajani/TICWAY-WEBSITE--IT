@@ -1,12 +1,14 @@
+{/**
+ * Componente que muestra una lista de imágenes en un carrusel horizontal.
+ * Utiliza Next.js para renderizar las imágenes y React Marquee Slider para el carrusel.
+*/}
+
 // Importaciones de módulos y componentes necesarios
 import Image from "next/image";
 import Marquee from "react-marquee-slider";
 import "./Services.css";
 
-{/**
- * Componente que muestra una lista de imágenes en un carrusel horizontal.
- * Utiliza Next.js para renderizar las imágenes y React Marquee Slider para el carrusel.
-*/}
+
 const Services = () => {
   return (
     <div className="services-wrapper">

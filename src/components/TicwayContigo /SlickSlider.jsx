@@ -1,3 +1,10 @@
+{/**
+
+Este código define un componente llamado SlickSlider en React, el cual utiliza la librería react-slick para crear un slider de contenido dinámico. 
+El slider muestra imágenes, títulos y descripciones de características utilizando animaciones de Framer Motion. 
+Las configuraciones del slider, como el número de slides a mostrar y el autoplay, se personalizan según el tamaño de la pantalla.
+*/}
+// Importaciones de módulos y componentes necesarios
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -7,6 +14,7 @@ import { tagVariants, titleVariants } from "@/src/utils/animation";
 import { ticway } from "@/src/utils/data";
 
 const SlickSlider = ({ features }) => {
+  // Configuración del slider
   const settings = {
     dots: true,
     infinite: true,
@@ -51,11 +59,14 @@ const SlickSlider = ({ features }) => {
 
   return (
     <div>
+      {/* Inicio del slider */}
       <Slider {...settings}>
         {ticway.map((feature, i) => (
           <div key={i} className="ticway-feature">
             <div className="ticway-content">
+              {/* Imagen de la característica */}
               <Image src={feature.icon} alt="feature" width={128} height={128} />
+              {/* Título de la característica */}
               <motion.span
                 className="sec-title"
                 variants={tagVariants}
@@ -64,6 +75,7 @@ const SlickSlider = ({ features }) => {
               >
                 {feature.title}
               </motion.span>
+              {/* Descripción de la característica */}
               <motion.span
                 className="text"
                 variants={tagVariants}
@@ -76,6 +88,7 @@ const SlickSlider = ({ features }) => {
           </div>
         ))}
       </Slider>
+      {/* Fin del slider */}
     </div>
   );
 };

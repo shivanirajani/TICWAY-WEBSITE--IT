@@ -1,3 +1,9 @@
+{/**
+
+El componente funcional llamado Soluciones muestra una serie de soluciones de outsourcing. 
+Cada solución incluye un título, una descripción, una lista de beneficios y una imagen asociada. 
+Además, utiliza animaciones utilizando Framer Motion para hacerlo más dinámico y atractivo visualmente.
+ */}
 // Importaciones de módulos y componentes necesarios
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; 
@@ -7,14 +13,7 @@ import { tagVariants, titleVariants } from "@/src/utils/animation";
 import { soluciones } from '@/src/utils/data'; 
 
 // Componente funcional Soluciones
-const Soluciones = ({ imageSrc, description }) => {
-  const [showDetails, setShowDetails] = useState(false); // Estado para controlar si se muestran los detalles de la solución
-
-  // Función para manejar el clic en una solución y mostrar o ocultar los detalles
-  const handleClick = () => {
-    setShowDetails(!showDetails);
-  };
-
+const Soluciones = () => {
   // Variantes de animación para las características de las soluciones
   const featureVariants = {
     offscreen: {
