@@ -46,7 +46,7 @@ const BrandingVideo = () => {
                     style={{ scale: escala }}
                 >
                     {/* Fuente del video */}
-                    <source src="/Banner.mp4" type="video/mp4" />
+                    <source src="video/Banner.mp4" type="video/mp4" />
                 </motion.video>
             </div>
         </div>
