@@ -137,7 +137,7 @@ export const ticway = [
 // Datos para la sección Soluciones Outsourcing  que contiene iconos, títulos, descripciones y beneficios
 export const soluciones = [
   {
-    icon: "/soluciones1.jpg",
+
     title: "Asesoría",
     des: "Asesores ayudan con desafíos comerciales y brindan asistencia en problemas.",
     benefits: [
@@ -152,13 +152,13 @@ export const soluciones = [
     
     ],
 
-    imageSrc: "/asesoria.jpg"
+    imageSrc: "soluciones/asesoria.jpg"
 
     
   },
 
   {
-    image: "/howItWorks/Frame-1.png",
+
     title: "Desarrollo & Consultoría",
     des: "Facilitación de soluciones antes de necesidades o demandas concretas.",
     benefits: [
@@ -170,11 +170,11 @@ export const soluciones = [
         "Migración de sistemas.",
         "Desarrollo de informes automatizados."
     ],
-   imageSrc: "/development.jpg" 
+   imageSrc: "soluciones/development.jpg" 
 },
 
 {
-  icon: "/howItWorks/Frame-2.png",
+
   title: "Soporte & Monitorización",
   des: "Tareas de acción, de ejecución, de buscar una solución inmediata a los problemas, con menor aporte de valor que la consultoría o la asesoría.",
   benefits: [
@@ -182,7 +182,7 @@ export const soluciones = [
       "Enfoque ligado a que éstos se presten de la forma más rápida y óptima posible.",
       "Servicios contemplados incluyen monitorización de servicios del cliente, soporte correctivo y preventivo de desarrollos y aplicaciones, y coordinación de soportes contratados por el cliente."
   ],
-  imageSrc: "/working.jpg" 
+  imageSrc: "soluciones/working.jpg" 
 },
 
 {
@@ -194,7 +194,7 @@ export const soluciones = [
     "Servicios incluyen auditoría inicial, elaboración de estrategia, participación activa en decisiones TIC, proposición activa de mejoras, gestión de proveedores, gestión de proyectos, interconexión de sistemas, desarrollo de informes automatizados, monitorización de servicios, soporte correctivo y preventivo."
   ],
 
-  imageSrc: "/team.jpg" 
+  imageSrc: "soluciones/team.jpg" 
 }
 
 
