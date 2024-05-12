@@ -44,7 +44,7 @@ const Navbar = () => {
             {/* Enlace al inicio de la página */}
             <Link to="h-wrapper" spy smooth offset={-100}>
               <Image
-                src="/logo.png"
+                src="logo/logo.png"
                 alt="Logo de TICWAY"
                 width={110}
                 height={60}
@@ -88,7 +88,7 @@ const Navbar = () => {
         <div className="n-logo-container">
           <Link to="h-wrapper" spy smooth offset={-100}>
             <Image
-              src="/logo.png"
+              src="logo/logo.png"
               alt="Logo de TICWAY"
               width={100}
               height={50}
