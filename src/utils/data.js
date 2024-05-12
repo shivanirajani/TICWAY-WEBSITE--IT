@@ -9,12 +9,12 @@ Esta práctica mejora de manera notable la estructura y el mantenimiento de los 
 
 export const HeroData = [
   {
-    src: "hero/person12.jpg",
+    src: "hero/person1.jpg",
     bg: "#808080",
     delay: 0.1,
   },
   {
-    src: "hero/person21.jpg",
+    src: "hero/person2.jpg",
     bg: "#f1f1f1",
     delay: 0.3,
   },
@@ -34,7 +34,7 @@ export const HeroData = [
     delay: 0.3,
   },
   {
-    src: "hero/person22.png",
+    src: "hero/person6.png",
     bg: "#2f3841",
     delay: 0.25,
   },
