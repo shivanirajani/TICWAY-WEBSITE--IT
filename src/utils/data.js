@@ -99,33 +99,33 @@ export const features = [
 // Datos para la sección Ticway Contigo que contiene iconos, títulos y descripciones
 export const ticway = [
   {
-    icon: "/TicwayContigo/image7.png",
+    icon: "/TicwayContigo/especialización.png",
     title: "Especialización",
     des: "Contamos con expertos en varias áreas para asesorarte. Nos encargamos de todo, permitiéndote enfocarte en tu negocio y ser competitivo.",
   },
   {
-    icon: "/TicwayContigo/image5.png",
+    icon: "/TicwayContigo/costesreducidos.png",
     title: "Costes Reducidos",
     des: "Nuestras capacidades se adaptan a tus necesidades con costos proporcionales. Obtén los servicios necesarios en el momento adecuado.",
   },
   {
-    icon: "/TicwayContigo/image6.png",
+    icon: "/TicwayContigo/riesgocero.png",
     title: "Riesgo Cero",
     des: "Ticway garantiza calidad en el servicio. Las alianzas duran cuando ambas partes están satisfechas. ¡Pruébanos y fortalece tu camino hacia el éxito!",
   },
 
    {
-      icon: "/TicwayContigo/image4.png",
+      icon: "/TicwayContigo/servicioflexible.png",
       title: "Servicio Flexible",
       des: "Podemos ser tu departamento externo especializado en Tecnología. Con infraestructura sólida y trabajadores cualificados para tus necesidades exactas.",
     },
     {
-      icon: "/TicwayContigo/image8.png",
+      icon: "/TicwayContigo/teletrabajo.png",
       title: "Teletrabajo",
       des: "No solo resolvemos incidencias; comprendemos tus necesidades para mejorar procesos, minimizar problemas y optimizar gastos para aportar valor real.",
     },
     {
-      icon: "/TicwayContigo/image9.png",
+      icon: "/TicwayContigo/transparencia.png",
       title: "Transparencia",
       des: "Ticway no es intermediario. Nos comprometemos a imparcialidad para las mejores condiciones, sin intereses, buscando beneficios claros para tu empresa.",
     },
