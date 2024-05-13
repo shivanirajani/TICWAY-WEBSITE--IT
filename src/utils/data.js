@@ -68,7 +68,7 @@ export const features = [
     title: "Control y Seguimiento TIC",
   },
   {
-    icon: "/features/innovación.png",
+    icon: "/features/innovacion.png",
     title: "Innovación TIC",
   },
 
@@ -99,7 +99,7 @@ export const features = [
 // Datos para la sección Ticway Contigo que contiene iconos, títulos y descripciones
 export const ticway = [
   {
-    icon: "/TicwayContigo/especialización.png",
+    icon: "/TicwayContigo/especializacion.png",
     title: "Especialización",
     des: "Contamos con expertos en varias áreas para asesorarte. Nos encargamos de todo, permitiéndote enfocarte en tu negocio y ser competitivo.",
   },
